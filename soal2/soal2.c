@@ -60,14 +60,6 @@ void listFilesRecursively(char *basePath)
 	  strcpy(deli,dp->d_name);
           strtok(deli,";");
           strcat(directory,deli);
-	  char deli2[]="";
-	  char directory2[]="/home/refaldyka/modul2/petshop/";
-	  strcpy(deli2,dp->d_name);
-	  strtok(deli2,"_");
-	  strcat(directory2,deli2);
-	  printf("%s\n",directory2);
-
-
 	  pid_t child_c, child_d;
           child_c = fork();
 	  if (child_c < 0) {
@@ -78,10 +70,7 @@ void listFilesRecursively(char *basePath)
 	  execv("/bin/mkdir", argv);
 }
 	  else{
-	  while ((wait(&status)) > 0);
-	  child_d = fork();
-	
-	  while ((wait(&status)) > 0);
+	  ((wait(&status)) > 0);
 }
 	  
          
